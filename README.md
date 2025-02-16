@@ -8,7 +8,23 @@ The primary goal of this project is to transform raw sales data into a structure
 
 ## Objectives
 
+- Clean and standardize the dataset by handling missing values, correcting inconsistencies, and formatting dates.
+- Analyze sales performance by identifying top-selling products, preferred payment methods, and sales trends.
+- Develop an interactive dashboard to visualize key insights and support data-driven decisions.
+
 ## Data Cleaning Process
+
+1. Eliminated duplicate records to maintain data integrity and avoid skewed analysis.
+2. Handle Missing Values (Quantity, Price Per Unit, Total Spent) by removing rows where at least two of these three columns were missing since the total cost could not be calculated.
+3. Fill Missing Values in Sales Data:
+    - Filled missing Quantity using Total Spent / Price Per Unit.
+    - Filled missing Price Per Unit using Total Spent / Quantity.
+    - Filled missing Total Spent using Quantity * Price Per Unit.
+4. Matched missing Item values based on existing Price Per Unit data.
+5. Used RANDBETWEEN in Payment Method clumn to assign a random value (Cash, Credit Card, or Digital Wallet) in a 1:1:1 ratio due to no significant distribution difference.
+6. Used RANDBETWEEN in Location column to assign a random value (In-store or Takeaway) in a 1:1 ratio.
+7. Dropped rows where Transaction Date was missing since it was a critical timestamp.
+8. Extracted the month from Transaction Date to support time-based analysis in the dashboard.
 
 ## Data Visualization
 
