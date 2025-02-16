@@ -17,7 +17,7 @@ The primary goal of this project is to transform raw sales data into a structure
 1. Eliminated duplicate records to maintain data integrity and avoid skewed analysis.
 2. Handle Missing Values (Quantity, Price Per Unit, Total Spent) by removing rows where at least two of these three columns were missing since the total cost could not be calculated.
 3. Fill Missing Values in Sales Data:
-    - Filled missing Quantity using $$ Total Spent / Price Per Unit $$
+    - Filled missing Quantity using $$ \text{Quantity} = \frac{\text{Total Spent}}{\text{Price Per Unit}} $$
     - Filled missing Price Per Unit using $$ Total Spent / Quantity $$
     - Filled missing Total Spent using $$ Quantity \times Price Per Unit $$
 4. Matched missing Item values based on existing Price Per Unit data.
