@@ -80,9 +80,9 @@ Now, let’s break down each chart and KPI in detail.
    - Value: $8.92 represents the average amount spent per transaction.
    - It is calculated using the formula:
 
-      $\[
+      $\
       \text{Average Spending} = \frac{\text{Total Revenue}}{\text{Total Transactions}}
-      \]$
+      \$
    
    Insights :
    - If this value is lower than expected, strategies such as upselling or bundle offers may be necessary.
